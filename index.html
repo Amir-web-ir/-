@@ -93,6 +93,10 @@
         width: 80px;
         margin-bottom: 15px;
       }
+      .chae-logo {
+        width: 80px;
+        margin-bottom: 15px;
+      }
       .bank-name {
         font-size: 14px;
         color: #aaa;
@@ -108,7 +112,7 @@
         padding: 14px;
         border: none;
         border-radius: 16px;
-        background: #3b82f6;
+        background: #22c55e;
         color: #fff;
         font-size: 16px;
         font-weight: 800;
@@ -250,6 +254,16 @@
           font-size: 2.2rem;
         }
       }
+      .link {
+        text-decoration: none;
+        color: #fff;
+      }
+      .link:hover{
+        color: black;
+      }
+      .copy-btn:hover{
+        color: black;
+      }
     </style>
   </head>
   <body>
@@ -257,7 +271,7 @@
       <!-- HERO -->
       <section class="hero">
         <div>
-          <h1>کمک برای خرید موتور 🏍️</h1>
+          <h1>کمک برای خرید موتور دست دوم</h1>
           <p>حتی <strong>۱۰ تومن</strong>، هرچقدر که می‌تونید ❤️</p>
         </div>
         <img src="CG-4-removebg-preview.png" />
@@ -289,7 +303,7 @@
           <div class="center">
             <strong id="percent">0%</strong>
             <span id="raisedText">0 تومان جمع شد</span>
-            <span id="raisedText"> هدف: 90,000,000 </span>
+            <span id="raisedText"> هدف: 35,000,000 </span>
           </div>
         </div>
       </section>
@@ -308,64 +322,61 @@
             📋 کپی شماره کارت
           </button>
         </div>
-      </section>
-
-      <!-- DONORS -->
-      <section class="donors">
-        <h3>آخرین کمک‌کنندگان</h3>
-        <ul id="donorList">
-          <li><span>محمد</span><span>۵۰,۰۰۰ تومان</span></li>
-          <li><span>سارا</span><span>۱۰۰,۰۰۰ تومان</span></li>
-          <li><span>رضا</span><span>۵۰,۰۰۰ تومان</span></li>
-          <li><span>مریم</span><span>۵۰۰,۰۰۰ تومان</span></li>
-          <li><span>علی</span><span>۳۰۰,۰۰۰ تومان</span></li>
-        </ul>
+        <!-- chae -->
+        <h2>چایی مهمونم کن🍵</h2>
+        <div class="bank-card">
+          <img src="pngimg.com - tea_PNG98874.png" class="chae-logo" />
+          <button class="copy-btn" onclick="copyCard()">
+            <a href="https://landing.chaechi.ir/MotorHelp" class="link">برو بریم</a>
+          </button>
+        </div>
       </section>
 
       <!-- APPS -->
       <section class="apps">
         <h2>اگر امکان کمک مالی ندارید 🙏</h2>
         <p>ثبت‌نام شما در این برنامه‌ها هم کمک بزرگیه</p>
+        <p>❌حتما حتما احراز هویت کامل بشه❌</p>
 
         <div class="grid">
           <div class="card">
             <img src="images.jfif" />
             <h3>میلی گلد</h3>
             <div class="code">
-              <span id="c1">INVITE-111</span>
+              <span id="c1">milli-86i3t</span>
               <span onclick="copy('c1')">کپی</span>
             </div>
-            <button onclick="openLink('https://example.com')">ثبت‌نام</button>
+            <button onclick="openLink('https://milli.gold/app/sign-up?referralCode=milli-86i3t')">ثبت‌نام</button>
           </div>
 
           <div class="card">
             <img src="icon-1668x2224.png" />
             <h3>ملی گلد</h3>
             <div class="code">
-              <span id="c2">INVITE-222</span>
+              <span id="c2">MG9162Ru1j0U</span>
               <span onclick="copy('c2')">کپی</span>
             </div>
-            <button onclick="openLink('https://example.com')">ثبت‌نام</button>
+            <button onclick="openLink('https://melligold.com/pwa/account/?ref=MG9162Ru1j0U')">ثبت‌نام</button>
           </div>
 
           <div class="card">
             <img src="images.png" />
             <h3>صراف</h3>
             <div class="code">
-              <span id="c3">INVITE-333</span>
+              <span id="c3">M5ANB</span>
               <span onclick="copy('c3')">کپی</span>
             </div>
-            <button onclick="openLink('https://example.com')">ثبت‌نام</button>
+            <button onclick="openLink('https://saraf.app/?ref=M5ANB')">ثبت‌نام</button>
           </div>
 
           <div class="card">
             <img src="-2147483648_-211297.jpg" />
-            <h3>ربات اساکوین</h3>
+            <h3>ربات تلگرامی اساکوین</h3>
             <div class="code">
               <span id="c3">کد ندارد فقط از طریق لینک</span>
               <span onclick="copy('c3')"></span>
             </div>
-            <button onclick="openLink('https://example.com')">
+            <button onclick="openLink('http://t.me/AsaCoineGold_bot?start=6484606676')">
               ورود به ربات
             </button>
           </div>
@@ -377,8 +388,8 @@
 
     <script>
       // Progress
-      const goal = 90000000;
-      let raised = 1000000;
+      const goal = 35000000;
+      let raised = 50000;
       const percent = Math.min(100, Math.round((raised / goal) * 100));
       const circle = document.getElementById("bar");
       const radius = 110;
